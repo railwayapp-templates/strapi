@@ -5,14 +5,14 @@ specifiers:
   '@strapi/plugin-users-permissions': 4.5.5
   '@strapi/provider-upload-cloudinary': 4.5.5
   '@strapi/strapi': 4.5.5
-  pg: 8.7.3
+  pg: 8.8.0
 
 dependencies:
   '@strapi/plugin-i18n': 4.5.5
   '@strapi/plugin-users-permissions': 4.5.5
   '@strapi/provider-upload-cloudinary': 4.5.5
-  '@strapi/strapi': 4.5.5_pg@8.7.3
-  pg: 8.7.3
+  '@strapi/strapi': 4.5.5_pg@8.8.0
+  pg: 8.8.0
 
 packages:
 
@@ -1910,7 +1910,7 @@ packages:
       '@strapi/helper-plugin': 4.5.5_icsa7wfvcudxpx7xwe4gkoimli
       '@strapi/icons': 1.4.1_sfoxds7t5ydpegc3knd667wn6m
       '@strapi/permissions': 4.5.5
-      '@strapi/strapi': 4.5.5_pg@8.7.3
+      '@strapi/strapi': 4.5.5_pg@8.8.0
       '@strapi/typescript-utils': 4.5.5
       '@strapi/utils': 4.5.5
       axios: 1.2.1_debug@4.3.4
@@ -2028,14 +2028,14 @@ packages:
       resolve: 1.20.0
     dev: false
 
-  /@strapi/database/4.5.5_pg@8.7.3:
+  /@strapi/database/4.5.5_pg@8.8.0:
     resolution: {integrity: sha512-HbImdvZMag2SaiaI/Wxvhg2LaIOO2aL5FhWelavohqfUCKq2Pq4VcWQ7R4KcqRuM2LDrvLPdY9bxWrXGSTiiVA==}
     engines: {node: '>=14.19.1 <=18.x.x', npm: '>=6.0.0'}
     dependencies:
       date-fns: 2.29.3
       debug: 4.3.4
       fs-extra: 10.0.0
-      knex: 1.0.7_pg@8.7.3
+      knex: 1.0.7_pg@8.8.0
       lodash: 4.17.21
       semver: 7.3.8
       umzug: 3.1.1
@@ -2384,7 +2384,7 @@ packages:
       fs-extra: 10.0.0
     dev: false
 
-  /@strapi/strapi/4.5.5_pg@8.7.3:
+  /@strapi/strapi/4.5.5_pg@8.8.0:
     resolution: {integrity: sha512-j7IfdPU+sAE8dQ5FZSt7LVKYX51IiOweH5XEee2TgTQ5TqMk3yEZEfC04VKNAG8ZKTyHsuKjdnZPe2nGL+s2rA==}
     engines: {node: '>=14.19.1 <=18.x.x', npm: '>=6.0.0'}
     hasBin: true
@@ -2393,7 +2393,7 @@ packages:
       '@koa/cors': 3.4.3
       '@koa/router': 10.1.1
       '@strapi/admin': 4.5.5_zo7mvaljsnfurliyzth5v7y5mm
-      '@strapi/database': 4.5.5_pg@8.7.3
+      '@strapi/database': 4.5.5_pg@8.8.0
       '@strapi/generate-new': 4.5.5
       '@strapi/generators': 4.5.5
       '@strapi/logger': 4.5.5
@@ -6941,7 +6941,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /knex/1.0.7_pg@8.7.3:
+  /knex/1.0.7_pg@8.8.0:
     resolution: {integrity: sha512-89jxuRATt4qJMb9ZyyaKBy0pQ4d5h7eOFRqiNFnUvsgU+9WZ2eIaZKrAPG1+F3mgu5UloPUnkVE5Yo2sKZUs6Q==}
     engines: {node: '>=12'}
     hasBin: true
@@ -6978,7 +6978,7 @@ packages:
       getopts: 2.3.0
       interpret: 2.2.0
       lodash: 4.17.21
-      pg: 8.7.3
+      pg: 8.8.0
       pg-connection-string: 2.5.0
       rechoir: 0.8.0
       resolve-from: 5.0.0
@@ -8470,12 +8470,12 @@ packages:
     engines: {node: '>=4.0.0'}
     dev: false
 
-  /pg-pool/3.5.2_pg@8.7.3:
+  /pg-pool/3.5.2_pg@8.8.0:
     resolution: {integrity: sha512-His3Fh17Z4eg7oANLob6ZvH8xIVen3phEZh2QuyrIl4dQSDVEabNducv6ysROKpDNPSD+12tONZVWfSgMvDD9w==}
     peerDependencies:
       pg: '>=8.0'
     dependencies:
-      pg: 8.7.3
+      pg: 8.8.0
     dev: false
 
   /pg-protocol/1.5.0:
@@ -8493,11 +8493,11 @@ packages:
       postgres-interval: 1.2.0
     dev: false
 
-  /pg/8.7.3:
-    resolution: {integrity: sha512-HPmH4GH4H3AOprDJOazoIcpI49XFsHCe8xlrjHkWiapdbHK+HLtbm/GQzXYAZwmPju/kzKhjaSfMACG+8cgJcw==}
+  /pg/8.8.0:
+    resolution: {integrity: sha512-UXYN0ziKj+AeNNP7VDMwrehpACThH7LUl/p8TDFpEUuSejCUIwGSfxpHsPvtM6/WXFy6SU4E5RG4IJV/TZAGjw==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
-      pg-native: '>=2.0.0'
+      pg-native: '>=3.0.1'
     peerDependenciesMeta:
       pg-native:
         optional: true
@@ -8505,7 +8505,7 @@ packages:
       buffer-writer: 2.0.0
       packet-reader: 1.0.0
       pg-connection-string: 2.5.0
-      pg-pool: 3.5.2_pg@8.7.3
+      pg-pool: 3.5.2_pg@8.8.0
       pg-protocol: 1.5.0
       pg-types: 2.2.0
       pgpass: 1.0.5
