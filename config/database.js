@@ -9,5 +9,6 @@ module.exports = ({ env }) => ({
       password: env('PGPASSWORD', 'password'),
       ssl: env.bool(true),
     },
+    pool: { min: 0 }
   },
 });
