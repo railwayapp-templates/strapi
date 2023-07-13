@@ -2511,15 +2511,15 @@
     sharp "0.32.0"
     yup "^0.32.9"
 
-"@strapi/plugin-users-permissions@4.11.4":
-  version "4.11.4"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-users-permissions/-/plugin-users-permissions-4.11.4.tgz#34b9ec6ce58480a9cda6462c2e2aa6d7441e316a"
-  integrity sha512-ZAbGfeeBcGAUUpx07/xhykFGy1ZYzg0/2uXr3XWxq507AmSs0RfYKO5b+o87dY6Q68eX5qx6+FriE9Yem3GU4g==
+"@strapi/plugin-users-permissions@4.11.5":
+  version "4.11.5"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-users-permissions/-/plugin-users-permissions-4.11.5.tgz#b9e6c81a957c777695533a21b8e3d852d140f97c"
+  integrity sha512-bmhpqWxSO39jQEcmBA7gtnogU8+f13d1odX4NIMwQlpWXTQKbtgngo6u5KZFXSs0agqm1ym2xy29b41//S4WQw==
   dependencies:
     "@strapi/design-system" "1.8.1"
-    "@strapi/helper-plugin" "4.11.4"
+    "@strapi/helper-plugin" "4.11.5"
     "@strapi/icons" "1.8.1"
-    "@strapi/utils" "4.11.4"
+    "@strapi/utils" "4.11.5"
     bcryptjs "2.4.3"
     formik "2.4.0"
     grant-koa "5.4.8"
@@ -2533,7 +2533,7 @@
     purest "4.0.2"
     react-intl "6.4.1"
     react-query "3.39.3"
-    react-redux "8.0.5"
+    react-redux "8.1.1"
     url-join "4.0.1"
     yup "^0.32.9"
 
