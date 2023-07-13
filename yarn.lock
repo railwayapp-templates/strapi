@@ -2380,6 +2380,23 @@
     react-query "3.39.3"
     react-select "5.7.0"
 
+"@strapi/helper-plugin@4.11.5":
+  version "4.11.5"
+  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.11.5.tgz#faab3b59bd119245d0c9271c5dbfbe6a655a97de"
+  integrity sha512-5nPAcL+kRIVzL2O7e2SRSm73DFxanWu3t6aSXpiHko8tQ8weu1ca7sxrYh/hPNxqSWpZo6vLCMvn5IXos3sq4Q==
+  dependencies:
+    axios "1.4.0"
+    date-fns "2.30.0"
+    formik "^2.4.0"
+    immer "9.0.19"
+    lodash "4.17.21"
+    prop-types "^15.8.1"
+    qs "6.11.1"
+    react-helmet "^6.1.0"
+    react-intl "6.4.1"
+    react-query "3.39.3"
+    react-select "5.7.0"
+
 "@strapi/icons@1.8.1":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.8.1.tgz#7a07f7b9002505ee7c0208befd2eacac7f680935"
@@ -2502,15 +2519,15 @@
     sharp "0.32.0"
     yup "^0.32.9"
 
-"@strapi/plugin-users-permissions@4.11.4":
-  version "4.11.4"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-users-permissions/-/plugin-users-permissions-4.11.4.tgz#34b9ec6ce58480a9cda6462c2e2aa6d7441e316a"
-  integrity sha512-ZAbGfeeBcGAUUpx07/xhykFGy1ZYzg0/2uXr3XWxq507AmSs0RfYKO5b+o87dY6Q68eX5qx6+FriE9Yem3GU4g==
+"@strapi/plugin-users-permissions@4.11.5":
+  version "4.11.5"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-users-permissions/-/plugin-users-permissions-4.11.5.tgz#b9e6c81a957c777695533a21b8e3d852d140f97c"
+  integrity sha512-bmhpqWxSO39jQEcmBA7gtnogU8+f13d1odX4NIMwQlpWXTQKbtgngo6u5KZFXSs0agqm1ym2xy29b41//S4WQw==
   dependencies:
     "@strapi/design-system" "1.8.1"
-    "@strapi/helper-plugin" "4.11.4"
+    "@strapi/helper-plugin" "4.11.5"
     "@strapi/icons" "1.8.1"
-    "@strapi/utils" "4.11.4"
+    "@strapi/utils" "4.11.5"
     bcryptjs "2.4.3"
     formik "2.4.0"
     grant-koa "5.4.8"
@@ -2524,7 +2541,7 @@
     purest "4.0.2"
     react-intl "6.4.1"
     react-query "3.39.3"
-    react-redux "8.0.5"
+    react-redux "8.1.1"
     url-join "4.0.1"
     yup "^0.32.9"
 
@@ -8465,6 +8482,18 @@ react-redux@8.0.5:
   version "8.0.5"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"
   integrity sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==
+  dependencies:
+    "@babel/runtime" "^7.12.1"
+    "@types/hoist-non-react-statics" "^3.3.1"
+    "@types/use-sync-external-store" "^0.0.3"
+    hoist-non-react-statics "^3.3.2"
+    react-is "^18.0.0"
+    use-sync-external-store "^1.0.0"
+
+react-redux@8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.1.1.tgz#8e740f3fd864a4cd0de5ba9cdc8ad39cc9e7c81a"
+  integrity sha512-5W0QaKtEhj+3bC0Nj0NkqkhIv8gLADH/2kYFMTHxCVqQILiWzLv6MaLuV5wJU3BQEdHKzTfcvPN0WMS6SC1oyA==
   dependencies:
     "@babel/runtime" "^7.12.1"
     "@types/hoist-non-react-statics" "^3.3.1"
