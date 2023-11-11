@@ -1,14 +1,12 @@
-module.exports = ({ env }) => ({
-  connection: {
-    client: 'postgres',
-    connection: {
-      host: env('PGHOST', '127.0.0.1'),
-      port: env.int('PGPORT', 5432),
-      database: env('PGDATABASE', 'strapi'),
-      user: env('PGUSER', 'strapi'),
-      password: env('PGPASSWORD', 'password'),
-      ssl: env.bool(true),
-    },
-    pool: { min: 0 }
-  },
-});
+module.exports = ({ env }) => {
+    let databaseUrl = env("RAILWAY_ENVIRONMENT", "none") == "none" ? env("DATABASE_URL") : env("DATABASE_PRIVATE_URL");
+    return {
+        connection: {
+            client: 'postgres',
+            connection: {
+                connectionString: databaseUrl
+            },
+            pool: { min: 0 }
+        }
+    }
+}
