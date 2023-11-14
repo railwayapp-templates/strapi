@@ -1,5 +1,6 @@
 module.exports = ({ env }) => {
-    let databaseUrl = env("RAILWAY_ENVIRONMENT", "none") == "none" ? env("DATABASE_URL") : env("DATABASE_PRIVATE_URL");
+    const databaseUrl = (process.env.HOSTNAME == "railway") ? process.env.DATABASE_PRIVATE_URL : process.env.DATABASE_URL;
+
     return {
         connection: {
             client: 'postgres',
