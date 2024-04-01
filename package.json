@@ -15,7 +15,7 @@
     "@strapi/plugin-users-permissions": "4.17.1",
     "@strapi/provider-upload-cloudinary": "4.17.1",
     "@strapi/strapi": "4.17.1",
-    "pg": "8.11.3"
+    "pg": "8.11.4"
   },
   "author": {
     "name": "A Strapi developer"
