@@ -1,0 +1,29 @@
+{
+  "info": {
+    "displayName": "Test",
+    "singularName": "test",
+    "pluralName": "tests",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "configurable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
