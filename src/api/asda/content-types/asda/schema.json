@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asdas",
+  "info": {
+    "singularName": "asda",
+    "pluralName": "asdas",
+    "displayName": "asda"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sadas": {
+      "type": "string"
+    }
+  }
+}
