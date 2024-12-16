@@ -810,6 +810,36 @@ export interface ApiAsdaAsda extends Schema.CollectionType {
   };
 }
 
+export interface ApiClaseClase extends Schema.CollectionType {
+  collectionName: 'clases';
+  info: {
+    singularName: 'clase';
+    pluralName: 'clases';
+    displayName: 'Clase';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Titulo: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::clase.clase',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::clase.clase',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Schema.CollectionType {
   collectionName: 'tests';
   info: {
@@ -853,6 +883,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::asda.asda': ApiAsdaAsda;
+      'api::clase.clase': ApiClaseClase;
       'api::test.test': ApiTestTest;
     }
   }

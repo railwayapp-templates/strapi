@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clases",
+  "info": {
+    "singularName": "clase",
+    "pluralName": "clases",
+    "displayName": "Clase"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    }
+  }
+}
