@@ -10,24 +10,20 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.23.1",
-    "@strapi/plugin-users-permissions": "4.23.1",
-    "@strapi/provider-upload-cloudinary": "4.23.1",
-    "@strapi/strapi": "4.23.1",
+    "@strapi/plugin-users-permissions": "5.7.0",
+    "@strapi/provider-upload-cloudinary": "5.7.0",
+    "@strapi/strapi": "5.7.0",
     "pg": "8.11.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.11"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
-  },
-  "engines": {
-    "node": "20"
   },
   "license": "MIT"
 }
