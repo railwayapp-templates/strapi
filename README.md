@@ -13,7 +13,7 @@ This example deploys self-hosted version of [Strapi](https://strapi.io/). Intern
 
 - Click the Railway button 👆
 - Add the environment variables
-  - If you choose not to add the Cloudinary related environment variables, your media will not be persisted between deploys.
+- Media will automatically be persisted between deploys!
 
 ## 💻 Developing locally
 
@@ -34,5 +34,4 @@ When developing locally this Strapi template will connect to the Postgres server
 ## 📝 Notes
 
 - After your app is deployed, visit the `/admin` endpoint to create your admin user.
-- Railway's filesystem is ephemeral which is why any changes to the filesystem are not persisted between deploys. This is why, this template uses Cloudinary for media storage.
 - If you want to use npm with this project make sure you delete the `yarn.lock` file after you have ran `npm install`
