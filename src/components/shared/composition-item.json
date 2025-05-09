@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_composition_items",
+  "info": {
+    "displayName": "composition",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pourcentage": {
+      "type": "integer"
+    },
+    "matiere": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::matiere.matiere"
+    }
+  }
+}

@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+<<<<<<< HEAD
+=======
+export interface SharedCompositionItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_composition_items';
+  info: {
+    description: '';
+    displayName: 'composition';
+  };
+  attributes: {
+    matiere: Schema.Attribute.Relation<'oneToOne', 'api::matiere.matiere'>;
+    pourcentage: Schema.Attribute.Integer;
+  };
+}
+
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -65,6 +80,10 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+<<<<<<< HEAD
+=======
+      'shared.composition-item': SharedCompositionItem;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

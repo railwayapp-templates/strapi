@@ -398,6 +398,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+<<<<<<< HEAD
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -470,11 +471,17 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+=======
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
     description: 'Organize your content into categories';
+<<<<<<< HEAD
     displayName: 'Category';
+=======
+    displayName: 'Produit';
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -482,7 +489,14 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+<<<<<<< HEAD
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+=======
+    composition_item: Schema.Attribute.Component<
+      'shared.composition-item',
+      true
+    >;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -494,8 +508,57 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+<<<<<<< HEAD
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
+=======
+    photo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    price: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    variantes: Schema.Attribute.Relation<'oneToMany', 'api::variante.variante'>;
+  };
+}
+
+export interface ApiCouleurCouleur extends Struct.CollectionTypeSchema {
+  collectionName: 'couleurs';
+  info: {
+    description: '';
+    displayName: 'couleur';
+    pluralName: 'couleurs';
+    singularName: 'couleur';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    couleur: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HEX: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::couleur.couleur'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -534,6 +597,103 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+<<<<<<< HEAD
+=======
+export interface ApiMatiereMatiere extends Struct.CollectionTypeSchema {
+  collectionName: 'matieres';
+  info: {
+    description: '';
+    displayName: 'Mati\u00E8re';
+    pluralName: 'matieres';
+    singularName: 'matiere';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::matiere.matiere'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSizeSize extends Struct.CollectionTypeSchema {
+  collectionName: 'sizes';
+  info: {
+    description: '';
+    displayName: 'size';
+    pluralName: 'sizes';
+    singularName: 'size';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::size.size'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    symbole: Schema.Attribute.String;
+    tour_de_poitrine: Schema.Attribute.Decimal;
+    tour_de_taille: Schema.Attribute.Decimal;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVarianteVariante extends Struct.CollectionTypeSchema {
+  collectionName: 'variantes';
+  info: {
+    description: '';
+    displayName: 'variante';
+    pluralName: 'variantes';
+    singularName: 'variante';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    couleurs: Schema.Attribute.Relation<'oneToMany', 'api::couleur.couleur'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::variante.variante'
+    > &
+      Schema.Attribute.Private;
+    photo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    produit: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.Relation<'oneToOne', 'api::size.size'>;
+    SKU: Schema.Attribute.String;
+    stock: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1044,10 +1204,19 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+<<<<<<< HEAD
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+=======
+      'api::category.category': ApiCategoryCategory;
+      'api::couleur.couleur': ApiCouleurCouleur;
+      'api::global.global': ApiGlobalGlobal;
+      'api::matiere.matiere': ApiMatiereMatiere;
+      'api::size.size': ApiSizeSize;
+      'api::variante.variante': ApiVarianteVariante;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
