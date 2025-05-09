@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- *  author controller
+ * variante controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::author.author');
+module.exports = createCoreController('api::variante.variante');
