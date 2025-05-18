@@ -398,11 +398,90 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+<<<<<<< HEAD
+export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
+  collectionName: 'articles';
+  info: {
+    description: 'Create your blog content';
+    displayName: 'Article';
+    pluralName: 'articles';
+    singularName: 'article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    blocks: Schema.Attribute.DynamicZone<
+      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
+    >;
+    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
+    cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
+  collectionName: 'authors';
+  info: {
+    description: 'Create authors for your content';
+    displayName: 'Author';
+    pluralName: 'authors';
+    singularName: 'author';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::author.author'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+=======
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
     description: 'Organize your content into categories';
+<<<<<<< HEAD
+    displayName: 'Category';
+=======
     displayName: 'Produit';
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -410,10 +489,14 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+<<<<<<< HEAD
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+=======
     composition_item: Schema.Attribute.Component<
       'shared.composition-item',
       true
     >;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -425,6 +508,10 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+<<<<<<< HEAD
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID;
+=======
     photo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -471,6 +558,7 @@ export interface ApiCouleurCouleur extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -509,6 +597,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+<<<<<<< HEAD
+=======
 export interface ApiMatiereMatiere extends Struct.CollectionTypeSchema {
   collectionName: 'matieres';
   info: {
@@ -603,6 +693,7 @@ export interface ApiVarianteVariante extends Struct.CollectionTypeSchema {
   };
 }
 
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1113,12 +1204,19 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+<<<<<<< HEAD
+      'api::article.article': ApiArticleArticle;
+      'api::author.author': ApiAuthorAuthor;
+      'api::category.category': ApiCategoryCategory;
+      'api::global.global': ApiGlobalGlobal;
+=======
       'api::category.category': ApiCategoryCategory;
       'api::couleur.couleur': ApiCouleurCouleur;
       'api::global.global': ApiGlobalGlobal;
       'api::matiere.matiere': ApiMatiereMatiere;
       'api::size.size': ApiSizeSize;
       'api::variante.variante': ApiVarianteVariante;
+>>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
