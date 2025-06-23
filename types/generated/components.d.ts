@@ -1,7 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-<<<<<<< HEAD
-=======
 export interface SharedCompositionItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_composition_items';
   info: {
@@ -14,7 +12,27 @@ export interface SharedCompositionItem extends Struct.ComponentSchema {
   };
 }
 
->>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
+export interface SharedHex extends Struct.ComponentSchema {
+  collectionName: 'components_shared_hexes';
+  info: {
+    displayName: 'HEX';
+  };
+  attributes: {
+    HEX: Schema.Attribute.String &
+      Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+  };
+}
+
+export interface SharedLogo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_logos';
+  info: {
+    displayName: 'logo';
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -77,18 +95,53 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTexteImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_texte_images';
+  info: {
+    displayName: 'TexteImage';
+  };
+  attributes: {
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    texte: Schema.Attribute.RichText;
+    titre: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTitleText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_title_texts';
+  info: {
+    displayName: 'TitleText';
+  };
+  attributes: {
+    text: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTitrePage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_titre_pages';
+  info: {
+    displayName: 'titrePage';
+  };
+  attributes: {
+    titre: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-<<<<<<< HEAD
-=======
       'shared.composition-item': SharedCompositionItem;
->>>>>>> 35d869cf9fe307d2e9a69fda2037c1109bc8aded
+      'shared.hex': SharedHex;
+      'shared.logo': SharedLogo;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.texte-image': SharedTexteImage;
+      'shared.title-text': SharedTitleText;
+      'shared.titre-page': SharedTitrePage;
     }
   }
 }

@@ -16,9 +16,12 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
+    "@strapi-community/cloudinary-media-library": "^1.0.1",
     "@strapi/plugin-cloud": "5.12.7",
     "@strapi/plugin-color-picker": "^5.13.0",
     "@strapi/plugin-users-permissions": "5.12.7",
+    "@strapi/provider-email-nodemailer": "^5.16.0",
+    "@strapi/provider-upload-cloudinary": "^5.16.0",
     "@strapi/strapi": "5.12.7",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
@@ -26,6 +29,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "stripe": "^18.2.1",
     "styled-components": "^6.0.0"
   },
   "engines": {

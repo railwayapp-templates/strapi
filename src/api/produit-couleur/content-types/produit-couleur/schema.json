@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produit_couleurs",
+  "info": {
+    "singularName": "produit-couleur",
+    "pluralName": "produit-couleurs",
+    "displayName": "Produit-couleur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "produit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::produit.produit",
+      "inversedBy": "produit_couleurs"
+    },
+    "couleur": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::couleur.couleur",
+      "inversedBy": "produit_couleurs"
+    },
+    "produit_couleur_sizes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit-couleur-size.produit-couleur-size",
+      "mappedBy": "produit_couleur"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "nom": {
+      "type": "string"
+    }
+  }
+}

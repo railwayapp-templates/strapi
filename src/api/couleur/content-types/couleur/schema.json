@@ -14,10 +14,16 @@
     "couleur": {
       "type": "string"
     },
-    "HEX": {
-      "type": "customField",
-      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
-      "customField": "plugin::color-picker.color"
+    "produit_couleurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit-couleur.produit-couleur",
+      "mappedBy": "couleur"
+    },
+    "hex": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hex"
     }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_title_texts",
+  "info": {
+    "displayName": "TitleText"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}
