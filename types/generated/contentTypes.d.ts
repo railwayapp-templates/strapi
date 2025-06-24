@@ -684,11 +684,12 @@ export interface ApiProduitCouleurProduitCouleur
       'api::produit-couleur.produit-couleur'
     > &
       Schema.Attribute.Private;
-    nom: Schema.Attribute.String;
+    nom: Schema.Attribute.String & Schema.Attribute.Required;
     photo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
     produit: Schema.Attribute.Relation<'manyToOne', 'api::produit.produit'>;
     produit_couleur_sizes: Schema.Attribute.Relation<
       'oneToMany',

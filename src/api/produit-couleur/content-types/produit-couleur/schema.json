@@ -32,7 +32,7 @@
     "photo": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -41,7 +41,8 @@
       ]
     },
     "nom": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
