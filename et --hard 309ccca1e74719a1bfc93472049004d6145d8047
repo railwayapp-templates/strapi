@@ -1,0 +1,80 @@
+[33mcommit bcc2a5c30252836ae6a58d70a338d3c5a1ac4ffc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon Jun 23 13:54:52 2025 +0200
+
+    Revert "Reapply "commit avant revert""
+    
+    This reverts commit b23888b62f84cdd589e590e8e2277c68ab3c5563.
+
+[33mcommit b23888b62f84cdd589e590e8e2277c68ab3c5563[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon Jun 23 13:53:29 2025 +0200
+
+    Reapply "commit avant revert"
+    
+    This reverts commit 709efb72401d7219d4b44c1f60e48eea1ba03b98.
+
+[33mcommit 709efb72401d7219d4b44c1f60e48eea1ba03b98[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon Jun 23 13:52:24 2025 +0200
+
+    Revert "commit avant revert"
+    
+    This reverts commit 788c6f7b8842e33d2b6e51356e4d01725c65fe12.
+
+[33mcommit 788c6f7b8842e33d2b6e51356e4d01725c65fe12[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon Jun 23 13:52:17 2025 +0200
+
+    commit avant revert
+
+[33mcommit 309ccca1e74719a1bfc93472049004d6145d8047[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mfixforce[m[33m)[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon Jun 23 13:12:02 2025 +0200
+
+    before update
+
+[33mcommit e79796e667644e3b7be925c97bc85c2d99954257[m
+Merge: 80a9cf0 7999e90
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Sun May 18 11:00:16 2025 +0200
+
+    Merge branch 'main' of github.com:chloegregor/kraze-back
+    fusion des branches 'main' et 'main' de 'github.com:chloegregor/kraze-back'
+
+[33mcommit 80a9cf03d15e2f09faf778cca97b4f1d754fd158[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Sun May 18 10:59:40 2025 +0200
+
+    api test
+
+[33mcommit 7999e90d71d12285ea1be4246250097c1802e5fe[m
+Merge: 88bf080 35d869c
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Fri May 9 15:03:23 2025 +0200
+
+    resolution conflit
+
+[33mcommit 88bf080e8edace0888404afaa2f373c9740a0430[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Fri May 9 14:59:32 2025 +0200
+
+    first commit on clone project
+
+[33mcommit 35d869cf9fe307d2e9a69fda2037c1109bc8aded[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Fri May 9 14:54:44 2025 +0200
+
+    commit for pull on another computer, db, collection table configured
+
+[33mcommit 272d02860981b42761da50d718d28e50752f81df[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon May 5 15:56:20 2025 +0200
+
+    first commit
+
+[33mcommit f75b9b6f5f36d8127a2c18f0d22258ca580cfa99[m
+Author: chloe gregoire <chle.gregire@gmail.com>
+Date:   Mon May 5 15:46:14 2025 +0200
+
+    Initial commit from Strapi

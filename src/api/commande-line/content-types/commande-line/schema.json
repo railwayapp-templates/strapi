@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commande_lines",
+  "info": {
+    "singularName": "commande-line",
+    "pluralName": "commande-lines",
+    "displayName": "commande-line",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "produit_couleur_size": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produit-couleur-size.produit-couleur-size"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "commande": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::commande.commande",
+      "inversedBy": "commande_lines"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

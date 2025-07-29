@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_titre_pages",
+  "info": {
+    "displayName": "titrePage"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matieres",
+  "info": {
+    "singularName": "matiere",
+    "pluralName": "matieres",
+    "displayName": "Matière",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    }
+  }
+}

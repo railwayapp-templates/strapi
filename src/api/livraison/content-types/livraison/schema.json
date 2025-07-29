@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "livraisons",
+  "info": {
+    "singularName": "livraison",
+    "pluralName": "livraisons",
+    "displayName": "livraison"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "policy": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "singularName": "produit",
+    "pluralName": "produits",
+    "displayName": "Produit",
+    "description": "Organize your content into categories"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "composition": {
+      "displayName": "composition_item",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.composition-item"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0
+    },
+    "produit_couleurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit-couleur.produit-couleur",
+      "mappedBy": "produit"
+    },
+    "entretien": {
+      "type": "text"
+    }
+  }
+}

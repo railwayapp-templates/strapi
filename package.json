@@ -1,5 +1,5 @@
 {
-  "name": "strapi",
+  "name": "kraze-back",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -9,6 +9,7 @@
     "deploy": "strapi deploy",
     "dev": "strapi develop",
     "develop": "strapi develop",
+    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
@@ -22,7 +23,16 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "@strapi-community/cloudinary-media-library": "^1.0.1",
+    "@strapi/plugin-cloud": "5.12.7",
+    "@strapi/plugin-color-picker": "^5.13.0",
+    "@strapi/provider-email-nodemailer": "^5.16.0",
+    "@strapi/provider-upload-cloudinary": "^5.16.0",
+    "better-sqlite3": "11.3.0",
+    "fs-extra": "^10.0.0",
+    "mime-types": "^2.1.27",
+    "stripe": "^18.2.1"
   },
   "devDependencies": {},
   "engines": {
@@ -30,6 +40,7 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "ae97edc3-b9a5-4000-bd34-43b102ca9a04"
+    "uuid": "505ed8a2-7f79-43e7-b156-69dcefe7d230",
+    "installId": "65d6129219f8c6eae3fd0b380b3136726203045b5a1dbf1be576f3f6b9ce6062"
   }
 }
