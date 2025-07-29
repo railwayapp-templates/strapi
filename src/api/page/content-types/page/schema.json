@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titre"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.texte-image",
+        "shared.titre-page"
+      ]
+    }
+  }
+}

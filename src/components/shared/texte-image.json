@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_texte_images",
+  "info": {
+    "displayName": "TexteImage"
+  },
+  "options": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "texte": {
+      "type": "richtext"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

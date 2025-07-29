@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produit_couleur_sizes",
+  "info": {
+    "singularName": "produit-couleur-size",
+    "pluralName": "produit-couleur-sizes",
+    "displayName": "Produit-couleur-size",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "produit_couleur": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::produit-couleur.produit-couleur",
+      "inversedBy": "produit_couleur_sizes"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "taille": {
+      "type": "string"
+    },
+    "reserve": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
