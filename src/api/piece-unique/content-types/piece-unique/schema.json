@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "piece_uniques",
+  "info": {
+    "singularName": "piece-unique",
+    "pluralName": "piece-uniques",
+    "displayName": "piece-unique"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer",
+      "default": 1
+    },
+    "reserve": {
+      "type": "integer",
+      "default": 0
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titre"
+    }
+  }
+}

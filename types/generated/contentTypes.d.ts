@@ -629,6 +629,44 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPieceUniquePieceUnique extends Struct.CollectionTypeSchema {
+  collectionName: 'piece_uniques';
+  info: {
+    displayName: 'piece-unique';
+    pluralName: 'piece-uniques';
+    singularName: 'piece-unique';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::piece-unique.piece-unique'
+    > &
+      Schema.Attribute.Private;
+    photos: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    price: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    reserve: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    slug: Schema.Attribute.UID<'titre'>;
+    stock: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    titre: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProduitCouleurSizeProduitCouleurSize
   extends Struct.CollectionTypeSchema {
   collectionName: 'produit_couleur_sizes';
@@ -773,6 +811,31 @@ export interface ApiSizeSize extends Struct.CollectionTypeSchema {
     symbole: Schema.Attribute.String;
     tour_de_poitrine: Schema.Attribute.Decimal;
     tour_de_taille: Schema.Attribute.Decimal;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Struct.CollectionTypeSchema {
+  collectionName: 'tags';
+  info: {
+    displayName: 'tag';
+    pluralName: 'tags';
+    singularName: 'tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tag: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1296,10 +1359,12 @@ declare module '@strapi/strapi' {
       'api::matiere.matiere': ApiMatiereMatiere;
       'api::message.message': ApiMessageMessage;
       'api::page.page': ApiPagePage;
+      'api::piece-unique.piece-unique': ApiPieceUniquePieceUnique;
       'api::produit-couleur-size.produit-couleur-size': ApiProduitCouleurSizeProduitCouleurSize;
       'api::produit-couleur.produit-couleur': ApiProduitCouleurProduitCouleur;
       'api::produit.produit': ApiProduitProduit;
       'api::size.size': ApiSizeSize;
+      'api::tag.tag': ApiTagTag;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
