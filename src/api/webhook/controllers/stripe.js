@@ -82,35 +82,44 @@ module.exports ={
           items.map (async (item) => {
           console.log("creatin g commande line for item:", item);
           const data = {
-            produit_couleur_size: item.documentId,
+            ...(item.type === "produit" ? {produit_couleur_size: item.documentId} : {piece_unique: item.documentId}),
             name: `${item.name} / ${item.taille} qty: ${item.quantity}`,
             quantity: item.quantity,
           }
 
-          let pcs = await strapi.documents('api::produit-couleur-size.produit-couleur-size').findOne({
-            documentId: item.documentId
-          })
-          console.log("pcs trouvé oui oui:", pcs);
 
-          if (!pcs) {
+          let product;
+          if (item.type === "produit") {
+            product = await strapi.documents('api::produit-couleur-size.produit-couleur-size').findOne({
+              documentId: item.documentId
+            });
+          } else if (item.type === "piece-unique") {
+            product = await strapi.documents('api::piece-unique.piece-unique').findOne({
+              documentId: item.documentId
+            });
+          }
+
+          console.log("pcs trouvé oui oui:", product);
+
+          if (!product) {
             console.error(`⚠️ Produit Couleur Size with ID ${item.documentId} not found`);
             throw new Error(`Produit Couleur Size with ID ${item.documentId} not found`);
           }
 
-          if (pcs.stock < item.quantity) {
+          if (product.stock < item.quantity) {
             console.error(`⚠️ Insufficient stock for Produit Couleur Size with ID ${item.documentId}`);
             throw new Error(`Insufficient stock for Produit Couleur Size with ID ${item.documentId}`);
           }
 
-          pcs = await strapi.documents('api::produit-couleur-size.produit-couleur-size').update({
+          product = await strapi.documents(item.type ==="produit" ? 'api::produit-couleur-size.produit-couleur-size' : 'api::piece-unique.piece-unique').update({
             documentId: item.documentId,
             data: {
-              stock: (pcs.stock - item.quantity),
-              reserve: (pcs.reserve - item.quantity)
+              stock: (product.stock - item.quantity),
+              reserve: (product.reserve - item.quantity)
             }
           })
 
-          console.log("pcs mis à jour:", pcs);
+          console.log("pcs mis à jour:", product);
 
           console.log("data for commande line:", data);
           return await strapi.entityService.create('api::commande-line.commande-line', {data}

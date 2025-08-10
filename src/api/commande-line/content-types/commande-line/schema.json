@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "produit_couleur_size": {
       "type": "relation",
@@ -27,6 +28,11 @@
     },
     "name": {
       "type": "string"
+    },
+    "piece_unique": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::piece-unique.piece-unique"
     }
   }
 }

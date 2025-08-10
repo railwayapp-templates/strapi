@@ -3,7 +3,7 @@
   "collectionName": "piece_uniques",
   "info": {
     "singularName": "piece-unique",
-    "pluralName": "piece-uniques",
+    "pluralName": "pieces-uniques",
     "displayName": "piece-unique"
   },
   "options": {

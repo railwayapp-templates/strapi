@@ -397,6 +397,10 @@ export interface ApiCommandeLineCommandeLine
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    piece_unique: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::piece-unique.piece-unique'
+    >;
     produit_couleur_size: Schema.Attribute.Relation<
       'oneToOne',
       'api::produit-couleur-size.produit-couleur-size'
@@ -633,7 +637,7 @@ export interface ApiPieceUniquePieceUnique extends Struct.CollectionTypeSchema {
   collectionName: 'piece_uniques';
   info: {
     displayName: 'piece-unique';
-    pluralName: 'piece-uniques';
+    pluralName: 'pieces-uniques';
     singularName: 'piece-unique';
   };
   options: {
