@@ -44,7 +44,18 @@ module.exports ={
       try{
         await Promise.all(
           items.map(async (item) => {
-            let pcs = await strapi.documents('api::produit-couleur-size.produit-couleur-size').findOne({
+           let endpoint
+
+            if (item.type === "produit") {
+                endpoint = 'api::produit-couleur-size.produit-couleur-size'
+            } else if (item.type === "piece-unique") {
+                endpoint = 'api::piece-unique.piece-unique'
+            } else {
+              console.error(`⚠️ Unknown item type: ${item.type}`);
+              throw new Error(`Unknown item type: ${item.type}`);
+            }
+
+            let pcs = await strapi.documents(endpoint).findOne({
               documentId: item.documentId
             })
             console.log("pcs d'expired session trouvée", pcs)
@@ -52,7 +63,7 @@ module.exports ={
             console.error(`⚠️ Produit Couleur Size with ID ${item.documentId} not found`);
             throw new Error(`Produit Couleur Size with ID ${item.documentId} not found`);
 
-          } pcs = await strapi.documents('api::produit-couleur-size.produit-couleur-size').update({
+          } pcs = await strapi.documents(endpoint).update({
             documentId: item.documentId,
             data: {
               reserve: (pcs.reserve - item.quantity)
