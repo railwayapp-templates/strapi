@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "couleurs",
+  "info": {
+    "singularName": "couleur",
+    "pluralName": "couleurs",
+    "displayName": "couleur",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "couleur": {
+      "type": "string"
+    },
+    "produit_couleurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit-couleur.produit-couleur",
+      "mappedBy": "couleur"
+    },
+    "hex": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hex"
+    }
+  }
+}

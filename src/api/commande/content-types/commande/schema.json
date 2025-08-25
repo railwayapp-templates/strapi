@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commandes",
+  "info": {
+    "singularName": "commande",
+    "pluralName": "commandes",
+    "displayName": "commande",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "commande_lines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::commande-line.commande-line",
+      "mappedBy": "commande"
+    },
+    "nom_complet": {
+      "type": "string"
+    },
+    "addresse": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "expediee": {
+      "type": "boolean",
+      "default": false
+    },
+    "email_sent": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

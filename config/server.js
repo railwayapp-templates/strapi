@@ -7,6 +7,9 @@ module.exports = ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-  url: env('URL'),
-  proxy: true
+  url: env('URL', "https://strapi-production-147e.up.railway.app"),
+  proxy: true,
+  logger: {
+    level: 'debug',
+  },
 });

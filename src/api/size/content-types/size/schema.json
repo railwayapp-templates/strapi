@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sizes",
+  "info": {
+    "singularName": "size",
+    "pluralName": "sizes",
+    "displayName": "size",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "symbole": {
+      "type": "string"
+    },
+    "tour_de_taille": {
+      "type": "decimal"
+    },
+    "tour_de_poitrine": {
+      "type": "decimal"
+    }
+  }
+}
